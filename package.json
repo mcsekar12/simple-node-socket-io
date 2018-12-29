@@ -1,0 +1,32 @@
+{
+  "name": "simple-node-socket-app",
+  "version": "1.0.0",
+  "description": "Simple socket io node app ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Node.js",
+    "Express",
+    "socket.io",
+    "chatbot",
+    "API"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "apiai": "^4.0.3",
+    "axios": "^0.18.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.11.1"
+  },
+  "engines": {
+    "node": "10.x.x",
+    "npm": "6.x.x"
+  }
+}
