@@ -1,5 +1,6 @@
 # simple-node-socket-io
 Simple socket io node app 
 
-` yarn install
-  yarn start `
+To Run the app
+` yarn install`
+` yarn start `
