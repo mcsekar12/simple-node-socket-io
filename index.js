@@ -33,7 +33,7 @@ io.sockets.on('connection', function(client) {
     let text = question.q;
     axios
       .post(
-        'http://142.93.198.17:5000/chatbot1',
+        'http://142.93.198.17:5000/chatbot',
         querystring.stringify({ user_question: text })
       )
       .then(function(response) {
