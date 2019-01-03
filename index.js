@@ -30,15 +30,25 @@ io.sockets.on('connection', function(client) {
 
   client.on('askBot', function(question) {
     console.log('askBot', question.q);
+    let config = {
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    };
     let text = question.q;
     axios
       .post(
         'http://142.93.198.17:5000/chatbot',
-        querystring.stringify({ user_question: text })
+        {
+          user_question: text
+        },
+        config
       )
       .then(function(response) {
-        console.log(response);
-        client.emit('new_msg', response.data);
+        client.emit(
+          'new_msg',
+          `Found ${response.data.data['full-details'].length} records`
+        );
       })
       .catch(function(error) {
         console.log(error);
