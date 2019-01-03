@@ -51,8 +51,10 @@ io.sockets.on('connection', function(client) {
         );
       })
       .catch(function(error) {
-        console.log(error);
-        client.emit('new_msg', error);
+        client.emit(
+          'new_msg',
+          'Sorry Cannot find any results.Please try again.'
+        );
       });
     //   let apiaiReq = apiai.textRequest(text, {
     //     sessionId: client.id
