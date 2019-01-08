@@ -46,8 +46,7 @@ io.sockets.on('connection', function(client) {
       )
       .then(function(response) {
         client.emit(
-          'new_msg',
-          `Found ${response.data.data['full-details'].length} records`
+          'new_msg',response.data.data
         );
       })
       .catch(function(error) {
